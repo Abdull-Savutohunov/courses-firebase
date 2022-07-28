@@ -1,0 +1,117 @@
+.Laptop {
+  width: 100%;
+  display: flex;
+  height: 840px;
+  font-size: 15px;
+  .alertErrorsBlock {
+    bottom: 2em;
+    left: 2em;
+    position: fixed;
+    z-index: 1000;
+  }
+  .avatar_container {
+    width: 350px;
+    height: 100%;
+    position: relative;
+
+    .avatar {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .logo {
+        width: 100%;
+        height: 40%;
+        display: flex;
+        justify-content: center;
+        img {
+          width: 300px;
+          height: 300px;
+          border: 1px solid black;
+        }
+      }
+      .contacts {
+        width: 100%;
+        height: 60%;
+        padding: 20px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        .contacts_container {
+          width: 90%;
+          p {
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 5px;
+            border-bottom: 1px solid black;
+            span {
+              white-space: nowrap;
+            }
+            .span {
+              position: relative;
+              display: block;
+              transition: .3s;
+              padding-left: 5px;
+              &:hover {
+                color: #5bbdbe;
+              }
+              &::before {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 2px;
+                background: #5e74b7;
+                transition: .3s;
+                bottom: -3px;
+              }
+              &:hover:before {
+                width: 100%;
+              }
+            }
+          }
+        }
+        .btn_container {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    }
+  }
+  .container_form {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    padding: 10px 20px;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .auth_input {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+
+    .select {
+      margin-bottom: 15px;
+    }
+
+    div {
+      .textArea {
+        width: 100%;
+        padding: 10px 20px;
+        margin-bottom: 15px;
+      }
+    }
+
+    .btn {
+      width: 100%;
+    }
+
+  }
+}

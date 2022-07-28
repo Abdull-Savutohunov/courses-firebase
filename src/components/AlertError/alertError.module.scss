@@ -1,0 +1,16 @@
+.alertErros {
+  width: 300px;
+  position: fixed;
+  bottom: 2em;
+  left: 2em;
+  .alertErrosTag {
+    position: fixed;
+    bottom: 2em;
+    left: 2em;
+    background: red;
+    color: white;
+    svg {
+      color: gold;
+    }
+  }
+}

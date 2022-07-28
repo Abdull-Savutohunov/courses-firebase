@@ -1,0 +1,56 @@
+.Mobile {
+  width: 100%;
+  min-height: 40vh;
+  .alertErrorsBlock {
+    bottom: 5em;
+    left: 1em;
+    position: fixed;
+    z-index: 100;
+  }
+  .logo {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 10px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .container_form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .auth_input {
+      margin: 10px 0;
+      width: 90%;
+    }
+
+    .select {
+      width: 90%;
+      margin: 10px 0;
+    }
+
+    .container_textArea {
+      width: 90%;
+      .textArea {
+        width: 100%;
+        padding: 5px 10px;
+        font-size: 14px;
+        margin: 10px 0;
+      }
+    }
+
+    .btn {
+      width: 90%;
+      margin: 10px 0;
+    }
+
+    .statusBtn {
+      width: 90%;
+      margin-bottom: 10px;
+    }
+  }
+}

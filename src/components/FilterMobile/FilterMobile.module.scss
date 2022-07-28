@@ -1,0 +1,57 @@
+.container {
+  width: 90%;
+  margin: 30px 0;
+  .FilterMobile {
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #00b0b0;
+    margin-bottom: 5px;
+    div {
+      display: flex;
+      align-items: center;
+    }
+    .logo {
+      padding: 20px;
+      color: white;
+      p {
+        font-size: 18px;
+        font-weight: 900;
+      }
+    }
+    .arrows {
+      color: white;
+      padding: 20px;
+      * {
+        width: 30px;
+        height: 30px;
+        transition: .3s;
+        &.active {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+  .filter_container {
+    background: #00b0b0;
+    transition: .3s;
+    height: 0;
+    border-radius: 5px;
+    overflow: hidden;
+    &.active {
+      transition: .3s;
+      height: 300px;
+      * {
+        opacity: 1;
+        transition: .2s;
+      }
+    }
+    * {
+      opacity: 0;
+      transition: .2s;
+    }
+  }
+}

@@ -1,0 +1,109 @@
+.More {
+  width: 100%;
+  padding: 10px 2.5%;
+  min-height: 40vh;
+  background: gray;
+  .more_header {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+  }
+
+  .more_body {
+    width: 100%;
+    min-height: 1vh;
+    padding: 10px 0;
+    .info {
+      width: 100%;
+      height: auto;
+      padding: 8px;
+      background: white;
+      color: black;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      h2 {
+        margin-bottom: 5px;
+      }
+
+      p {
+        margin-bottom: 5px;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .more_footer {
+    width: 100%;
+    height: auto;
+    form {
+      background: white;
+      border-radius: 5px;
+      padding: 5px;
+      .rating {
+        margin: 5px 0;
+      }
+
+      .inputs {
+        width: 100%;
+        margin: 5px 0;
+      }
+
+      .btn {
+        width: 100%;
+        margin: 5px 0;
+      }
+    }
+
+    .container_message {
+      width: 100%;
+      height: auto;
+      .cards {
+        background: white;
+        margin: 10px 0;
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+        overflow: hidden;
+        padding: 5px;
+        .cards_header {
+          width: 100%;
+          height: 30%;
+          display: flex;
+          .logo_image {
+            width: 60px;
+            height: 60px;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+
+          .info_list {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 100%;
+            margin-left: 10px;
+            p {
+              padding-left: 5px;
+            }
+          }
+        }
+        .cards_body {
+          width: 100%;
+          p {
+            padding: 10px 3px;
+          }
+
+        }
+      }
+    }
+  }
+}
