@@ -15,43 +15,35 @@ import MenuItem from '@mui/material/MenuItem';
 import {useNavigate} from "react-router-dom";
 import {handleSignOut} from "../../firebase/firebase";
 import useLogin from "../../hooks/useLogin";
+import { useDispatch } from 'react-redux';
+import {changeSort} from '../../redux/slices/filterSlice'
 
-const settings = ['Аккаунт', 'Выйти'];
+const settings = ['Аккаунт', 'Выйти' ,  'favorites' ];
 const settings2 = ['Регистрация', 'Войти'];
 const pages2 = [
   {
     id: 1,
-    title: 'Main',
-    route: '/'
-  },
-  {
-    id: 2,
-    title: 'Favorites',
-    route: '/favorites'
-  },
-  {
-    id: 3,
-    title: 'Languages',
+    title: 'languages',
     route: '/languages'
   },
   {
-    id: 4,
-    title: 'Technology',
+    id: 2,
+    title: 'technology',
     route: '/technology'
   },
   {
-    id:5,
-    title:'Сooking',
+    id:3,
+    title:'cooking',
     route:'/cooking'
   },
   {
-    id:6,
-    title:'Needlework',
+    id:4,
+    title:'needlework',
     route:'/needlework'
   },
   {
-    id:7,
-    title:'Beauty',
+    id:5,
+    title:'beauty',
     route:'/beauty'
   },
 ];
@@ -61,9 +53,11 @@ const ResponsiveAppBar = () => {
   const navigate = useNavigate()
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const dispatch = useDispatch()
 
   const handleFunctionUsers = (event) => {
     if(event === 'Аккаунт') navigate('profils')
+    if(event === 'favorites') navigate('/favorites')
     if(event === 'Выйти') handleSignOut()
     if(event === 'Регистрация') navigate('/auth/register')
     if(event === 'Войти') navigate('/auth/login')
@@ -136,14 +130,17 @@ const ResponsiveAppBar = () => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages2.map(page => (
+              {
+              pages2.map(page => (
                 <MenuItem key={page.id} onClick={event => {
+                  page.title !== 'favorites' && dispatch(changeSort(page.title))
                   navigate(`${page.route}`)
                   handleCloseNavMenu(event)
                 }}>
                   <Typography textAlign="center">{page.title}</Typography>
                 </MenuItem>
-              ))}
+              ))
+              }
             </Menu>
           </Box>
           {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
@@ -170,6 +167,7 @@ const ResponsiveAppBar = () => {
               <Button
                 key={page.id}
                 onClick={event => {
+                  dispatch(changeSort(page.title))
                   navigate(`${page.route}`)
                   handleCloseNavMenu(event)
                 }}

@@ -1,12 +1,11 @@
-import React from 'react'
-// import ResponsiveAppBar from './../../components/Header/index';
-import { MobileLeng } from './../Main/Mobile/index';
+import React, {useEffect} from 'react'
+import Course from './../Course/index';
 
 const Languages = () => {
+
   return (
     <div>
-      {/* <ResponsiveAppBar /> */}
-      <MobileLeng/>
+      <Course/>
     </div>
   )
 }

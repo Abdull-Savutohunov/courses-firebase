@@ -1,10 +1,11 @@
 import React from 'react'
-import { MobileIT } from '../Main/Mobile'
+import Course from '../Course'
+
 
 const Technology = () => {
   return (
     <>
-      <MobileIT />
+      <Course/>
     </>
   )
 }

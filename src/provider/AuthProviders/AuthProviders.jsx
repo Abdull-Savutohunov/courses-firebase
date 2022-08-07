@@ -6,7 +6,7 @@ import {getAllUsers, getUser} from "../../API";
 export const AuthContext = React.createContext({})
 
 export const AuthProviders = ({children}) => {
-	const [cardsName , setCardsName] = React.useState('Allergist-immunologist')
+	const [cardsName , setCardsName] = React.useState('Languages')
 	const [FaUserLock , setFaUserLock] = React.useState(false)
 	const [ImUserPlus , setImUserPlus] = React.useState(false)
 	const [alertErrors , setAlertErrors] = React.useState(false)

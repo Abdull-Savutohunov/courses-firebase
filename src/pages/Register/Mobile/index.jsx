@@ -2,8 +2,8 @@ import React from 'react';
 import {Button} from "@mui/material";
 import {Link} from 'react-router-dom'
 import cs from './Mobile.module.scss'
-import FormRegisterStudent from "../../../components/UI/FormRegisterPotsient";
-import FormRegisterCourses from './../../../components/UI/FormRegisterDoctor/index';
+import FormRegisterCourses from './../../../components/UI/FormRegisterCourses/index';
+import FormRegisterStudent from './../../../components/UI/FormRegisterStudent/index';
 
 const Mobile = () => {
   const [changeComponents , setChangeComponents] = React.useState(true)

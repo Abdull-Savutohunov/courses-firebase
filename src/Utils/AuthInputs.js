@@ -130,28 +130,31 @@ export const directionCourses = {
   directions: [
     {
       id:1,
-      value:'Allergist-immunologist',
-      title:'Языковые'
+      value:'languages',
+      title:'Языковые',
+      label:{
+        
+      }
     },
     {
       id: 2,
-      value:'Dermatologist',
-      title:'IT'
+      value:'Cooking',
+      title:'Готовка'
     },
     {
       id: 3 ,
-      value:'Nutritionist',
+      value:'handlemaked',
       title:'Рукодельные'
     },
     {
       id: 4,
-      value:'Infectionist',
+      value:'IT',
       title:'Технологические'
     },
     {
       id: 5,
-      value:'Cardiologist',
-      title:'Спортивные'
+      value:'Beauty',
+      title:'Мода'
     },
   ]
 }

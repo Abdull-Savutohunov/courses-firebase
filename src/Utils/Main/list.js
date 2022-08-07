@@ -27,12 +27,12 @@ export const directionCourses = {
     {
       id: 2,
       value:'Дерматолог',
-      title:'Дерматолог'
+      title:'French'
     },
     {
       id: 3 ,
       value:'Диетолог',
-      title:'Диетолог'
+      title:'German'
     },
     {
       id: 4,
@@ -87,24 +87,24 @@ export const directionCourses = {
   ]
 }
 
-export const coursesWorkStyle = {
-  name: 'coursesWorkStyle',
-  label: 'Стиль обучения',
-  data: [
-    {
-      id:1,
-      value: 'Cтрогое обучени',
-      title: 'Cтрогое обучение',
-    },
-    {
-      id:2,
-      value: 'Большой уклон на разговорные навыки',
-      title: 'Большой уклон на разговорные навыки',
-    },
-    {
-      id:3,
-      value: 'Понимающие учителья'  ,
-      title: 'Понимающие учителья',
-    }
-  ]
-}
+// export const coursesWorkStyle = {
+//   name: 'coursesWorkStyle',
+//   label: 'Стиль обучения',
+//   data: [
+//     {
+//       id:1,
+//       value: 'Cтрогое обучени',
+//       title: 'Cтрогое обучение',
+//     },
+//     {
+//       id:2,
+//       value: 'Большой уклон на разговорные навыки',
+//       title: 'Большой уклон на разговорные навыки',
+//     },
+//     {
+//       id:3,
+//       value: 'Понимающие учителья'  ,
+//       title: 'Понимающие учителья',
+//     }
+//   ]
+// }

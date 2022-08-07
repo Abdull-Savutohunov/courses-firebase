@@ -6,16 +6,18 @@ export const getAll = () => instance.get('/cards/.json')
 
 export const getLanguages = (id, languages) => instance.get(`/cards/${languages}/${id}.json`)
 
-export const getEnglish = (id, languages, english) => instance.get(`/cards/${languages}/${english}/${id}.json`)
+// export const getEnglish = (id, languages, english) => instance.get(`/cards/${languages}/${english}/${id}.json`)
 
 // export const postEnglish = (id, )
+ 
 
-
-
+export const postCategories = (data) => instance.post('/filters.json', data)
 
 export const getUsersMore = (id , courses) => instance.get(`/cards/${courses}/${id}/.json`)
 
 export const createNewUser = (data , userId) => instance.put(`/users/${userId}/.json` , data)
+
+export const createNewCourse = (direction, data, courseId) => instance.put(`/courses/${direction}/${courseId}.json` , data)
 
 export const getUser = (id) => instance.get(`/users/${id}/.json`)
 
@@ -40,3 +42,9 @@ export const getAllUsers = (users) => instance.get(`/cards/${users}/.json`)
 export const addFavorites = (id , data) => instance.put(`/users/${id}/favorites/.json` , data)
 
 export const deleteFavorites = (id , deleteId) => instance.delete(`/users/${id}/favorites/${deleteId}/.json`)
+
+
+
+
+
+export const getCourseDir = (direction) => instance.get(`courses/${direction}.json`)

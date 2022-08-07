@@ -1,11 +1,12 @@
-import React from 'react'
-import { MobileCooking } from './../Main/Mobile/index';
+import React, {useEffect} from 'react'
+import Course from './../Course/index';
 
 const Cooking = () => {
+
+
   return (
     <>
-      <MobileCooking/>
-
+      <Course/>
     </>
   )
 }

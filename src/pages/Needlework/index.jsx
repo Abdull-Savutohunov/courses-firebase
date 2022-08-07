@@ -1,10 +1,10 @@
-import React from 'react'
-import { MobileNeedle } from './../Main/Mobile/index';
+import Course from '../Course'
 
 const Needlewokr = () => {
+
   return (
     <>
-      <MobileNeedle/>
+      <Course/>
     </>
   )
 }

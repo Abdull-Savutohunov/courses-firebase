@@ -1,9 +1,9 @@
 import React from 'react';
 import cs from './Laptop.module.scss'
 import {Button} from "@mui/material";
-import FormRegisterStudent from "../../../components/UI/FormRegisterPotsient";
 import {Link} from "react-router-dom";
-import FormRegisterCourses from './../../../components/UI/FormRegisterDoctor/index';
+import FormRegisterCourses from './../../../components/UI/FormRegisterCourses/index';
+import FormRegisterStudent from './../../../components/UI/FormRegisterStudent/index';
 
 const Laptop = () => {
   const [changeComponents , setChangeComponents] = React.useState(true)

@@ -15,7 +15,7 @@ import Languages from './pages/Languages/index';
 import Technology from './pages/Technology/index';
 import Cooking from './pages/Cooking/index';
 import Needlewokr from './pages/Needlework/index';
-import Beauty from './pages/Beauty/index';
+import Course from "./pages/Course";
 
 function App() {
   return (
@@ -23,14 +23,13 @@ function App() {
       <ResponsiveAppBar />
       <Routes>
         <Route element={<PrivateRoutes/>}>
-          <Route path='/favorites' element={<Favorites/>}/>
-          <Route path='/profils' element={<Profils/>}/>
+          <Route path='/:title' element={<Course/>}/>
+          {/* <Route path='/profils' element={<Profils/>}/>
           <Route path='/languages' element={<Languages/>}/>
           <Route path='/technology' element={<Technology/>}/>
           <Route path='/cooking' element={<Cooking/>}/>
           <Route path='/needlework' element={<Needlewokr/>}/>
-          <Route path='/beauty' element={<Beauty/>}/>
-
+          <Route path='/beauty' element={<Beauty/>}/> */}
 
           <Route path='*' element={<Navigate to='/'/>}/>
         </Route>

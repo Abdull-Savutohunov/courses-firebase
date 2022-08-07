@@ -13,13 +13,12 @@ import {
 import {useNavigate} from "react-router-dom";
 import {createUserWithEmailAndPassword, updateProfile} from "firebase/auth";
 import {auth} from "../../../firebase/firebase";
-import {createNewUser} from "../../../API";
+import {createNewCourse} from "../../../API";
 import TextAreaForm from "../TextAreaForm";
 import useLogin from "../../../hooks/useLogin";
 // import CircularProgress from "@mui/material/CircularProgress";
 // import {getDownloadURL, ref, uploadBytesResumable} from '@firebase/storage'
 // import {storage} from "../../../firebase/firebase";
-
 const FormRegisterCourses = ({cs}) => {
   const {setUpdateData} = useLogin()
   const navigate = useNavigate()
@@ -36,11 +35,11 @@ const FormRegisterCourses = ({cs}) => {
     filterListBlock(event.target.value)
     setCourses(event.target.value);
   };
-  const handleChange2 = (event) => {setCourses2(event.target.value);};
-  const handleChange3 = (event) => {setCourses3(event.target.value);};
+  const handleChange2 = (event) => {setCourses2(event.target.value)}
+  const handleChange3 = (event) => {setCourses3(event.target.value)}
 
-  const handleNewUser = (data, userId) => {
-    createNewUser(data, userId).then(res => {
+  const handleNewCourses = (data, direction, courseId) => {
+    createNewCourse(direction, data, courseId ).then(res => {
       setUpdateData(item => !item)
       navigate('/')
     })
@@ -64,7 +63,7 @@ const FormRegisterCourses = ({cs}) => {
       setCourses2('')
       setCourses3('')
       e.target.reset()
-      res && handleNewUser({...base , people: 'Courses' , status: false , urlAvatar: null , favorites: {key: 'value'}}, res.user.uid)
+      res && handleNewCourses({...base , people: 'Courses' , status: false , urlAvatar: null , favorites: {key: 'value'}}, directionCoursesObject.value, res.user.uid)
       navigate('/')
     }else {
       setPasswordValue(true)
